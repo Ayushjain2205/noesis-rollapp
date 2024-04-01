@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import Layout from "@/components/Layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="h-screen">
+    <Layout>
       <button className="btn btn-primary">Primary</button>
-    </div>
+    </Layout>
   );
 }
