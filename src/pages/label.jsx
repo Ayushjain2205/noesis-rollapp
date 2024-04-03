@@ -16,7 +16,13 @@ const label = () => {
   return (
     <Layout>
       <div className="flex gap-[200px]">
-        <div className="flex flex-col h-screen">
+        <div className="flex flex-col gap-[25px]">
+          <LabelCard />
+          <LabelCard />
+          <LabelCard />
+          <LabelCard />
+          <LabelCard />
+          <LabelCard />
           <LabelCard />
         </div>
         <div className="flex flex-col w-full pt-[50px]">
