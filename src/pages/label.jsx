@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from "../components/Layout";
 import ImageAnnotator from "../components/Custom/ImageAnnotator";
-import DatasetCard from "../components/UI/DatasetCard";
 import toast from "react-hot-toast";
+import LabelCard from "../components/UI/LabelCard";
 
 const label = () => {
   const notify = () =>
@@ -17,7 +17,7 @@ const label = () => {
     <Layout>
       <div className="flex gap-[200px]">
         <div className="flex flex-col h-screen">
-          <DatasetCard />
+          <LabelCard />
         </div>
         <div className="flex flex-col w-full pt-[50px]">
           <ImageAnnotator imageUrl="https://picsum.photos/400" />
@@ -26,7 +26,7 @@ const label = () => {
               <img className="h-[60px]" src="/icons/arrow.svg" alt="" />
             </button>
             <button
-              className="h-[60px] w-[150px] bg-green-500 bg-opacity-70 font-[500] rounded-xl"
+              className="h-[60px] text-[20px] w-[150px] bg-green-500 bg-opacity-70 font-[500] rounded-xl"
               onClick={notify}
             >
               Submit
