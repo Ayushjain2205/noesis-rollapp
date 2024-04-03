@@ -4,8 +4,8 @@ import Dropdown from "./Dropdown";
 
 const Annotataor = (props) => {
   const [pageSize, setPageSize] = useState({
-    width: 800,
-    height: 600,
+    width: 400,
+    height: 400,
   });
 
   useEffect(() => {
@@ -13,15 +13,17 @@ const Annotataor = (props) => {
     if (typeof window !== "undefined") {
       // Set the initial page size
       setPageSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: 800,
+        height: 500,
       });
+
+      console.log(window.innerHeight, window.innerWidth);
 
       // Add event listener for window resize
       const handleResize = () => {
         setPageSize({
-          width: window.innerWidth,
-          height: window.innerHeight,
+          width: 800,
+          height: 500,
         });
       };
       window.addEventListener("resize", handleResize);
@@ -36,24 +38,24 @@ const Annotataor = (props) => {
   const onChange = (data) => console.log("onChnage", data);
 
   return (
-    <div className="annotation">
-      <ReactPictureAnnotation
-        {...props}
-        inputElement={(value, onChange, onDelete) => (
-          <Dropdown
-            value={value}
-            onChange={onChange}
-            onDelete={onDelete}
-            options={props.options}
-          />
-        )}
-        image="https://source.unsplash.com/random/800x600"
-        onSelect={onSelect}
-        onChange={onChange}
-        width={pageSize.width}
-        height={pageSize.height}
-      />
-    </div>
+    <ReactPictureAnnotation
+      {...props}
+      inputElement={(value, onChange, onDelete) => (
+        <Dropdown
+          value={value}
+          onChange={onChange}
+          onDelete={onDelete}
+          options={props.options}
+        />
+      )}
+      image="https://source.unsplash.com/random/400x400"
+      onSelect={onSelect}
+      onChange={onChange}
+      width={pageSize.width}
+      height={pageSize.height}
+      //   width={400}
+      //   height={400}
+    />
   );
 };
 

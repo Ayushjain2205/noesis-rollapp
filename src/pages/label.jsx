@@ -5,7 +5,10 @@ import ImageAnnotator from "../components/Custom/ImageAnnotator";
 const label = () => {
   return (
     <Layout>
-      <ImageAnnotator imageUrl="https://picsum.photos/800" />
+      <div className="flex col">Hello</div>
+      <div className="h-[400px] w-[400px]">
+        <ImageAnnotator imageUrl="https://picsum.photos/400" />
+      </div>
     </Layout>
   );
 };
