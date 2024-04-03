@@ -21,9 +21,24 @@ const label = () => {
         </div>
         <div className="flex flex-col w-full pt-[50px]">
           <ImageAnnotator imageUrl="https://picsum.photos/400" />
-          <button className="mt-[550px]" onClick={notify}>
-            Save
-          </button>
+          <div className="flex flex-row  mt-[550px] ml-[150px] w-[500px] justify-between">
+            <button className="">
+              <img className="h-[60px]" src="/icons/arrow.svg" alt="" />
+            </button>
+            <button
+              className="h-[60px] w-[150px] bg-green-500 bg-opacity-70 font-[500] rounded-xl"
+              onClick={notify}
+            >
+              Submit
+            </button>
+            <button className="">
+              <img
+                className="h-[60px] rotate-180"
+                src="/icons/arrow.svg"
+                alt=""
+              />
+            </button>
+          </div>
         </div>
       </div>
     </Layout>
