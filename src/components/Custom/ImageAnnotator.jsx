@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ReactPictureAnnotation } from "react-picture-annotation";
 import Dropdown from "./Dropdown";
 
-const Annotataor = (props) => {
+const Annotataor = ({ imageUrl }) => {
   const [pageSize, setPageSize] = useState({
     width: 400,
     height: 400,
@@ -39,16 +39,10 @@ const Annotataor = (props) => {
 
   return (
     <ReactPictureAnnotation
-      {...props}
       inputElement={(value, onChange, onDelete) => (
-        <Dropdown
-          value={value}
-          onChange={onChange}
-          onDelete={onDelete}
-          options={props.options}
-        />
+        <Dropdown value={value} onChange={onChange} onDelete={onDelete} />
       )}
-      image="https://source.unsplash.com/random/400x400"
+      image={imageUrl}
       onSelect={onSelect}
       onChange={onChange}
       width={pageSize.width}
