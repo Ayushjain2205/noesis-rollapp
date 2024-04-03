@@ -33,15 +33,6 @@ export default function Layout({ children }) {
               Datasets
             </span>
           </Link>
-          <Link href="/annotate">
-            <span
-              className={`font-[500] text-[18px] ${
-                isActive("/annotate") ? "text-primary" : "text-grey"
-              }`}
-            >
-              Annotate
-            </span>
-          </Link>
           <Link href="/label">
             <span
               className={`font-[500] text-[18px] ${
@@ -49,6 +40,15 @@ export default function Layout({ children }) {
               }`}
             >
               Label
+            </span>
+          </Link>
+          <Link href="/create">
+            <span
+              className={`font-[500] text-[18px] ${
+                isActive("/create") ? "text-primary" : "text-grey"
+              }`}
+            >
+              Create
             </span>
           </Link>
         </div>
