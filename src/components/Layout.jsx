@@ -42,6 +42,15 @@ export default function Layout({ children }) {
               Label
             </span>
           </Link>
+          <Link href="/generate">
+            <span
+              className={`font-[500] text-[18px] ${
+                isActive("/generate") ? "text-primary" : "text-grey"
+              }`}
+            >
+              Generate
+            </span>
+          </Link>
           <Link href="/create">
             <span
               className={`font-[500] text-[18px] ${
