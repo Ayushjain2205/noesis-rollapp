@@ -64,7 +64,9 @@ export default function Layout({ children }) {
         <div className="flex flex-row gap-[100px]">
           <div className="flex flex-row gap-[10px] items-center">
             <img className="h-[36px] w-[36px]" src="/icons/coin.svg" alt="" />
-            <span className="font-bold text-[22px]">1200</span>
+            <span className="font-bold text-[22px]">
+              {new Intl.NumberFormat("en-US").format(1200)}
+            </span>
           </div>
           <div>
             <ConnectButton theme={customTheme} client={client} />

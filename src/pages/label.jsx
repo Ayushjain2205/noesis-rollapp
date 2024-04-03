@@ -10,7 +10,6 @@ const label = () => {
       <div className="flex flex-row items-center gap-[5px]">
         ✅ You earned <b>2 coins</b>
         <img className="h-[25px]" src="/icons/coin.svg" alt="" />
-        {/* <button onClick={() => toast.dismiss(t.id)}>Dismiss</button> */}
       </div>
     ));
 
