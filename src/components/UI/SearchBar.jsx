@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchBar = () => {
   return (
-    <div className="flex flex-row w-2/3 items-center h-[50px] rounded-xl bg-white ring ring-indigo-50 px-4 space-x-2">
+    <div className="flex flex-row  items-center h-[50px] rounded-xl bg-white ring ring-indigo-50 px-4 space-x-2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -18,8 +18,8 @@ const SearchBar = () => {
       </svg>
       <input
         type="text"
-        className="flex-grow px-2 py-1 text-base"
-        placeholder="Search..."
+        className="flex-grow px-2 py-1 text-base outline-none"
+        placeholder="Search Datasets..."
       />
       <svg
         xmlns="http://www.w3.org/2000/svg"
