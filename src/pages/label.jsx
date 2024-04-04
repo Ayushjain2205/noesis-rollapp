@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import ImageAnnotator from "../components/Custom/ImageAnnotator";
 import toast from "react-hot-toast";
 import LabelCard from "../components/UI/LabelCard";
+import datasetDetails from "../utils/datasets";
 
 const label = () => {
   const notify = () =>
@@ -17,13 +18,15 @@ const label = () => {
     <Layout>
       <div className="flex gap-[200px]">
         <div className="flex flex-col gap-[25px]">
-          <LabelCard />
-          <LabelCard />
-          <LabelCard />
-          <LabelCard />
-          <LabelCard />
-          <LabelCard />
-          <LabelCard />
+          {datasetDetails.map((dataset, index) => (
+            <LabelCard
+              key={index}
+              type={dataset.type}
+              title={dataset.title}
+              fileCount={dataset.fileCount} // Assuming fileCount is now part of your dataset details
+              coins={dataset.coins} // Pass coins here, assuming it's a new or existing property of your datasets
+            />
+          ))}
         </div>
         <div className="flex flex-col w-full pt-[50px]">
           <ImageAnnotator imageUrl="https://picsum.photos/400" />

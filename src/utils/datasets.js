@@ -10,6 +10,8 @@ const datasetDetails = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, sed etiam.",
     price: 1200,
+    fileCount: 5,
+    coins: 2,
   },
   {
     type: "image",
@@ -19,6 +21,8 @@ const datasetDetails = [
     labelled: true,
     description: "Exploring architectural wonders through images.",
     price: 2000,
+    fileCount: 8,
+    coins: 1,
   },
   {
     type: "csv",
@@ -29,6 +33,8 @@ const datasetDetails = [
     description:
       "A dataset on temperature changes globally over the past century.",
     price: 1500,
+    fileCount: 50,
+    coins: 1,
   },
   {
     type: "audio",
@@ -38,6 +44,8 @@ const datasetDetails = [
     labelled: true,
     description: "A collection of birdsong recordings from around the world.",
     price: 1800,
+    fileCount: 100,
+    coins: 5,
   },
   {
     type: "pdf",
@@ -48,6 +56,8 @@ const datasetDetails = [
     description:
       "A compilation of e-books covering various programming languages.",
     price: 3000,
+    fileCount: 750,
+    coins: 5,
   },
   {
     type: "video",
@@ -58,6 +68,8 @@ const datasetDetails = [
     description:
       "Step-by-step cooking tutorials ranging from beginner to advanced levels.",
     price: 2500,
+    fileCount: 8,
+    coins: 2,
   },
 ];
 
