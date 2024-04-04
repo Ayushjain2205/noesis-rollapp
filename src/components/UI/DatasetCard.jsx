@@ -6,6 +6,8 @@ const DatasetCard = () => {
       className="relative flex flex-col gap-[10px] rounded-xl bg-white p-4 ring ring-indigo-50 w-[300px] group cursor-pointer"
       onClick={() => document.getElementById("my_modal_2").showModal()}
     >
+      <div className="absolute inset-0 rounded-xl bg-secondary bg-opacity-0 group-hover:bg-opacity-25 transition-opacity duration-300 ease-in-out"></div>
+
       <div className="flex row items-center gap-[5px] h-[50px]">
         <img
           className="h-[45px] w-[45px]"
