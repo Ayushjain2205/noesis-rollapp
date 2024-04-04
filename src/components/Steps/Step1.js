@@ -29,7 +29,8 @@ const Step1 = () => {
             <div
               key={index}
               onClick={() => setSelectedFile(format)}
-              className={`flex w-max rounded-xl p-2 ring ring-indigo-50 cursor-pointer ${
+              data-tip={format}
+              className={`flex w-max rounded-xl p-2 ring ring-indigo-50 cursor-pointer tooltip ${
                 selectedFile === format ? "bg-[#B8B8FF70]" : ""
               }`}
             >
