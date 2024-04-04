@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import Loader from "../UI/Loader";
+import Loader from "../Custom/Loader";
 // import abi from "../../abi/RoyalCoin";
 // import { useRouter } from "next/router";
 // import { ethers } from "ethers";
@@ -59,9 +59,9 @@ const Step3 = () => {
               explore distant galaxies, nebulae, and star clusters that offer a
               glimpse of the vastness of our universe.
             </p>
-            <span>
-              <i className="fa-regular fa-file"></i> 5 files
-            </span>
+            <div className="flex flex-row justify-center w-[75px] h-[30px] rounded-xl border bg-indigo-500 bg-opacity-50 py-1 text-[12px] font-bold text-white">
+              5 Files
+            </div>
           </div>
         </div>
         <label className="label cursor-pointer w-max flex flex-row gap-[10px] mx-auto">
@@ -80,7 +80,7 @@ const Step3 = () => {
 
       {buttonState === "confirming" && (
         <div className="absolute top-0 left-0 w-full h-full bg-white bg-opacity-50 flex items-center justify-center z-10">
-          {/* <Loader /> */}
+          <Loader />
         </div>
       )}
     </div>
