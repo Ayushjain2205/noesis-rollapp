@@ -1,9 +1,17 @@
 import React from "react";
 
-const DatasetCard = () => {
+const DatasetCard = ({
+  type,
+  title,
+  category,
+  cleaned,
+  labelled,
+  description,
+  price,
+}) => {
   return (
     <div
-      className="relative flex flex-col gap-[10px] rounded-xl bg-white p-4 ring ring-indigo-50 w-[300px] group cursor-pointer"
+      className="relative flex flex-col gap-[10px] rounded-xl bg-white p-4 ring ring-indigo-50 w-[300px] h-[300px] group cursor-pointer"
       onClick={() => document.getElementById("my_modal_2").showModal()}
     >
       <div className="absolute inset-0 rounded-xl bg-secondary bg-opacity-0 group-hover:bg-opacity-25 transition-opacity duration-300 ease-in-out"></div>
@@ -11,33 +19,34 @@ const DatasetCard = () => {
       <div className="flex row items-center gap-[5px] h-[50px]">
         <img
           className="h-[45px] w-[45px]"
-          src="/icons/types/video.svg"
-          alt=""
+          src={`/icons/types/${type}.svg`}
+          alt={type}
         />
-        <p className="font-semibold text-[20px] leading-[25px]">
-          My cute little dataset asdasd
-        </p>
+        <p className="font-semibold text-[20px] leading-[25px]">{title}</p>
       </div>
       <div className="flex">
-        <div className="flex flex-row justify-center w-[100px] rounded-xl border bg-indigo-500 bg-opacity-50 px-3 py-1.5 text-[10px] font-bold uppercase text-white">
-          Technology
+        <div
+          className={`flex flex-row justify-center w-[100px] rounded-xl border bg-indigo-500 bg-opacity-50 px-3 py-1.5 text-[10px] font-bold uppercase text-white`}
+        >
+          {category}
         </div>
-        <div className="flex flex-row justify-center w-[75px] rounded-xl border bg-green-500 bg-opacity-50 px-3 py-1.5 text-[10px] font-bold uppercase text-white">
-          Cleaned
-        </div>
-        <div className="flex flex-row justify-center w-[75px] rounded-xl border bg-green-500 bg-opacity-50 px-3 py-1.5 text-[10px] font-bold uppercase text-white">
-          Lablelled
-        </div>
+        {cleaned && (
+          <div className="flex flex-row justify-center w-[75px] rounded-xl border bg-green-500 bg-opacity-50 px-3 py-1.5 text-[10px] font-bold uppercase text-white">
+            Cleaned
+          </div>
+        )}
+        {labelled && (
+          <div className="flex flex-row justify-center w-[75px] rounded-xl border bg-green-500 bg-opacity-50 px-3 py-1.5 text-[10px] font-bold uppercase text-white">
+            Labelled
+          </div>
+        )}
       </div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sequi
-        distinctio possimus autem eos veritatis quibusdam rem. Vero, cum neque
-        enim molestias, recusandae non aliquam velit, suscipit quidem est nihil?
-      </p>
-      {/* Price div */}
+      <p>{description}</p>
       <div className="absolute bottom-0 left-0 right-0 flex flex-row gap-[10px] items-center bg-indigo-500 px-4 py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
         <img className="h-[36px] w-[36px]" src="/icons/coin.svg" alt="" />
-        <span className="font-bold text-[22px] text-white">1200</span>
+        <span className="font-bold text-[22px] text-white">
+          {new Intl.NumberFormat("en-US").format(price)}
+        </span>
       </div>
 
       {/* Modal */}
