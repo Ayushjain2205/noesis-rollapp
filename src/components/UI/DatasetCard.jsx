@@ -16,6 +16,11 @@ const DatasetCard = ({
     "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/11/highway-ap-1669716096.jpg",
   ];
 
+  const truncateDescription = (text, maxLength = 250) => {
+    if (text.length <= maxLength) return text;
+    return `${text.substring(0, maxLength)}...`;
+  };
+
   return (
     <div
       className="relative flex flex-col gap-[10px] rounded-xl bg-white p-4 ring ring-indigo-50 w-[300px] h-[300px] group cursor-pointer"
@@ -48,7 +53,7 @@ const DatasetCard = ({
           </div>
         )}
       </div>
-      <p>{description}</p>
+      <p>{truncateDescription(description)}</p>
       <div className="absolute bottom-0 left-0 right-0 flex flex-row gap-[10px] items-center bg-indigo-500 px-4 py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
         <img className="h-[36px] w-[36px]" src="/icons/coin.svg" alt="" />
         <span className="font-bold text-[22px] text-white">
