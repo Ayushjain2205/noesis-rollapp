@@ -14,13 +14,15 @@ const Label = () => {
     "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/11/highway-ap-1669716096.jpg",
   ];
 
-  const notify = () =>
+  const notify = () => {
     toast((t) => (
       <div className="flex flex-row items-center gap-[5px]">
         ✅ You earned <b>2 coins</b>
         <img className="h-[25px]" src="/icons/coin.svg" alt="coin" />
       </div>
     ));
+    nextImage();
+  };
 
   const nextImage = () => {
     setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -49,7 +51,9 @@ const Label = () => {
         <div className="flex flex-col w-full">
           <div className="flex flex-row w-2/3 gap-[10px] items-center mb-[20px]">
             <img className="h-[40px]" src="/icons/types/image.svg" alt="type" />
-            <p className="text-[24px] font-[500]">My cute little dataset</p>
+            <p className="text-[24px] font-[500]">
+              Cars and bikes on road images
+            </p>
             <div className="flex flex-row gap-[5px] items-center ml-auto">
               <img className="h-[40px]" src="/icons/coin.svg" alt="coin" />
               <span className="text-[20px] font-[800]">2</span>
@@ -86,7 +90,7 @@ const Label = () => {
               <img className="h-[60px]" src="/icons/arrow.svg" alt="Previous" />
             </button>
             <button
-              className="h-[60px] text-[20px] w-[150px] bg-green-500 bg-opacity-70 font-[500] rounded-xl"
+              className=" h-[60px] text-[20px] w-[150px] bg-green-500 bg-opacity-70 font-[500] rounded-xl"
               onClick={notify}
             >
               Submit

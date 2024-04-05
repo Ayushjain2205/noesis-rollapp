@@ -9,6 +9,13 @@ const DatasetCard = ({
   description,
   price,
 }) => {
+  const images = [
+    "https://www.webbikeworld.com/wp-content/uploads/2014/03/Rear.jpg",
+    "https://img.freepik.com/premium-photo/motorcycles-cars-road-costa-smeralda-sardinia-island-italy-summer-motorcyclist-driving-scooter-highway-europe-view-moped-motorway_250132-18181.jpg",
+    "https://cdn.pixabay.com/video/2019/09/26/27260-362770008_tiny.jpg",
+    "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/11/highway-ap-1669716096.jpg",
+  ];
+
   return (
     <div
       className="relative flex flex-col gap-[10px] rounded-xl bg-white p-4 ring ring-indigo-50 w-[300px] h-[300px] group cursor-pointer"
@@ -51,7 +58,7 @@ const DatasetCard = ({
 
       {/* Modal */}
       <dialog id="my_modal_2" className="modal">
-        <div className="modal-box h-[600px] min-w-[800px]  flex flex-col gap-[10px] rounded-xl bg-white p-4 ring ring-indigo-50">
+        <div className="modal-box h-[650px] min-w-[800px]  flex flex-col gap-[10px] rounded-xl bg-white p-4 ring ring-indigo-50">
           <div className="flex row items-center gap-[5px] ">
             <img
               className="h-[96px] w-[96px]"
@@ -59,7 +66,7 @@ const DatasetCard = ({
               alt=""
             />
             <p className="font-semibold text-[32px] leading-[42px]">
-              My cute little dataset asdasd
+              Cars and bikes on road images
             </p>
           </div>
           <div className="flex">
@@ -74,12 +81,26 @@ const DatasetCard = ({
             </div>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-            sequi distinctio possimus autem eos veritatis quibusdam rem. Vero,
-            cum neque enim molestias, recusandae non aliquam velit, suscipit
-            quidem est nihil?
+            This dataset is a comprehensive collection of images capturing cars
+            and bikes on various roads. It is designed for use in computer
+            vision projects, traffic analysis studies, and development of
+            autonomous vehicle systems. With images sourced from urban,
+            suburban, and rural settings, it offers wide applicability for
+            segmentation, object detection, and machine learning projects
+            focusing on vehicular movement and traffic conditions.
           </p>
-          <p>Sample files</p>
+          <p className="font-[600] text-[16px] ">Sample files</p>
+          <div className="carousel my-[20px] ">
+            {images.map((image, index) => (
+              <div key={index} className="carousel-item">
+                <img src={image} alt={`Slide ${index + 1}`} />
+              </div>
+            ))}
+          </div>
+          <button className="mt-auto btn btn-block btn-primary btn-outline text-[16px]">
+            Buy for 1200{" "}
+            <img className="h-[36px]" src="/icons/coin.svg" alt="" />{" "}
+          </button>
         </div>
         <form method="dialog" className="modal-backdrop">
           <button>close</button>
