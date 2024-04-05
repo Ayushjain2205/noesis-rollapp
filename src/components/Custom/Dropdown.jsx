@@ -6,8 +6,9 @@ export default class Dropdown extends Component {
     super(props);
     this.state = {
       options: [
-        { value: "Title", label: "Title" },
-        { value: "Label", label: "Label" },
+        { value: "Car", label: "Car" },
+        { value: "Bike", label: "Bike" },
+        { value: "Other", label: "Other" },
       ],
       selectedOption: null, // Ensure you have this state to track the current selection
     };
