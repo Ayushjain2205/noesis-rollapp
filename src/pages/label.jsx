@@ -75,7 +75,10 @@ const Label = () => {
             </div>
           </div>
           <div className="mt-[20px]">
-            <ImageAnnotator imageUrl={images[imageIndex]} />
+            <ImageAnnotator
+              key={images[imageIndex]}
+              imageUrl={images[imageIndex]}
+            />
           </div>
 
           <div className="flex flex-row mt-[550px] ml-[150px] w-[500px] justify-between">
