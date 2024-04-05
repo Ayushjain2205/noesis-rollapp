@@ -47,8 +47,6 @@ const Annotataor = ({ imageUrl }) => {
       onChange={onChange}
       width={pageSize.width}
       height={pageSize.height}
-      //   width={400}
-      //   height={400}
     />
   );
 };
