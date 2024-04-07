@@ -20,7 +20,7 @@ export default function Layout({ children }) {
       <div className="navbar flex items-center justify-between bg-base-100 px-[20px]">
         <div className="flex flex-row gap-[16px]">
           <img className="h-[36px] w-[36px]" src="/icons/logo.svg" alt="" />
-          <span className="text-primary font-bold text-[36px]">Eigen</span>
+          <span className="text-primary font-bold text-[36px]">Noesis</span>
         </div>
         <div className="flex flex-row gap-[40px]">
           {/* Apply styles conditionally based on the active state */}
