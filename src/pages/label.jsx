@@ -51,7 +51,7 @@ const Label = () => {
         <div className="flex flex-col w-full">
           <div className="flex flex-row w-2/3 gap-[10px] items-center mb-[20px]">
             <img className="h-[40px]" src="/icons/types/image.svg" alt="type" />
-            <p className="text-[24px] font-[500]">
+            <p className="text-[16px] font-[500]">
               Cars and bikes on road images
             </p>
             <div className="flex flex-row gap-[5px] items-center ml-auto">
@@ -59,7 +59,7 @@ const Label = () => {
               <span className="text-[20px] font-[800]">2</span>
             </div>
           </div>
-          <div role="alert" className="alert w-2/3">
+          <div role="alert" className="alert w-2/3 bg-[#00000000] border-none">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
