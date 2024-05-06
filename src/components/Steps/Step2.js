@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useDropzone } from "react-dropzone";
-import Loader from "../Custom/Loader";
 
 const Step2 = () => {
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone();

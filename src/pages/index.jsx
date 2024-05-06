@@ -10,7 +10,7 @@ export default function Home() {
       <div className="flex flex-col w-5/6 m-auto mt-[20px]">
         <SearchBar />
 
-        <div className="mt-[20px] m-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[20px]">
+        <div className="mt-[20px] m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-[20px]">
           {datasetDetails.map((detail, index) => (
             <DatasetCard
               key={index}
