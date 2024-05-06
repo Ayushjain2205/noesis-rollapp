@@ -16,7 +16,7 @@ const DatasetCard = ({
     "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/11/highway-ap-1669716096.jpg",
   ];
 
-  const truncateDescription = (text, maxLength = 250) => {
+  const truncateDescription = (text, maxLength = 140) => {
     if (text.length <= maxLength) return text;
     return `${text.substring(0, maxLength)}...`;
   };
@@ -30,13 +30,13 @@ const DatasetCard = ({
 
       <div className="flex row items-center gap-[5px] h-[50px]">
         <img
-          className="h-[45px] w-[45px]"
+          className="h-[40px] w-[40px]"
           src={`/icons/types/${type}.svg`}
           alt={type}
         />
-        <p className="font-semibold text-[20px] leading-[25px]">{title}</p>
+        <p className="font-semibold text-[16px] leading-[25px]">{title}</p>
       </div>
-      <div className="flex">
+      <div className="flex mt-[70px]">
         <div
           className={`flex flex-row justify-center w-[100px] rounded-xl border bg-indigo-500 bg-opacity-50 px-3 py-1.5 text-[10px] font-bold uppercase text-white`}
         >
@@ -53,7 +53,9 @@ const DatasetCard = ({
           </div>
         )}
       </div>
-      <p>{truncateDescription(description)}</p>
+      <p className="text-[14px] text-opacity-60">
+        {truncateDescription(description)}
+      </p>
       <div className="absolute bottom-0 left-0 right-0 flex flex-row gap-[10px] items-center bg-indigo-500 px-4 py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
         <img className="h-[36px] w-[36px]" src="/icons/coin.svg" alt="" />
         <span className="font-bold text-[22px] text-white">
