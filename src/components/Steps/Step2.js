@@ -14,7 +14,6 @@ const Step2 = () => {
   ));
   return (
     <div className="flex flex-col gap-[20px]">
-      <h4 className="text-[32px]">Add Data</h4>
       <div
         {...getRootProps({
           className:
