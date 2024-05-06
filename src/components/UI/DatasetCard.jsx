@@ -77,14 +77,14 @@ const DatasetCard = ({
             </p>
           </div>
           <div className="flex">
+            <div className="flex flex-row justify-center w-[75px] rounded-xl border bg-primary px-3 py-1.5 text-[10px] font-bold uppercase text-white">
+              10 Files
+            </div>
             <div className="flex flex-row justify-center w-[100px] rounded-xl border bg-indigo-500 bg-opacity-50 px-3 py-1.5 text-[10px] font-bold uppercase text-white">
               Technology
             </div>
             <div className="flex flex-row justify-center w-[75px] rounded-xl border bg-green-500 bg-opacity-50 px-3 py-1.5 text-[10px] font-bold uppercase text-white">
               Cleaned
-            </div>
-            <div className="flex flex-row justify-center w-[75px] rounded-xl border bg-green-500 bg-opacity-50 px-3 py-1.5 text-[10px] font-bold uppercase text-white">
-              Lablelled
             </div>
           </div>
           <p>
