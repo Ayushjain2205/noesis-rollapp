@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useState } from "react";
+import Loader from "../Custom/Loader";
 const DatasetCard = ({
   type,
   title,
@@ -16,9 +16,20 @@ const DatasetCard = ({
     "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/11/highway-ap-1669716096.jpg",
   ];
 
+  const [showLoader, setShowLoader] = useState(false);
+
   const truncateDescription = (text, maxLength = 140) => {
     if (text.length <= maxLength) return text;
     return `${text.substring(0, maxLength)}...`;
+  };
+
+  const handleBuyClick = () => {
+    setShowLoader(true);
+    // Simulate a delay to show the loader
+    setTimeout(() => {
+      setShowLoader(false);
+      // Add your logic for the buy operation here
+    }, 5000); // Adjust the delay time as needed
   };
 
   return (
@@ -65,7 +76,7 @@ const DatasetCard = ({
 
       {/* Modal */}
       <dialog id="my_modal_2" className="modal">
-        <div className="modal-box h-[650px] min-w-[800px]  flex flex-col gap-[10px] rounded-xl bg-white p-4 ring ring-indigo-50">
+        <div className="modal-box h-[650px] min-w-[800px] relative flex flex-col gap-[10px] rounded-xl bg-white p-4 ring ring-indigo-50">
           <div className="flex row items-center gap-[5px] ">
             <img
               className="h-[96px] w-[96px]"
@@ -104,10 +115,18 @@ const DatasetCard = ({
               </div>
             ))}
           </div>
-          <button className="mt-auto btn btn-block btn-primary btn-outline text-[16px]">
+          <button
+            className="mt-auto btn btn-block btn-primary btn-outline text-[16px]"
+            onClick={handleBuyClick}
+          >
             Buy for 1200{" "}
             <img className="h-[36px]" src="/icons/coin.svg" alt="" />{" "}
           </button>
+          {showLoader && (
+            <div className="absolute top-0 left-0 w-full h-full bg-white bg-opacity-50 flex items-center justify-center z-10">
+              <Loader />
+            </div>
+          )}
         </div>
         <form method="dialog" className="modal-backdrop">
           <button>close</button>
