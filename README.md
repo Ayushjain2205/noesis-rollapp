@@ -1,40 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Inspiration 💡
 
-## Getting Started
+Imagine a world where data isn't just abundant but sparkling clean and meticulously labeled, waiting to be the fuel for the next AI revolution. That's the world we dream of with Noesis! 🌍✨ Inspired by the chaotic beauty of data and the untapped potential it holds, we set out to create a decentralized bazaar, a place where data transforms from rough diamonds to polished gems, ready to power insights and innovations.
 
-First, run the development server:
+## What it does 🚀
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Noesis is not just a marketplace; it's a playground for data enthusiasts! 🎢 Users can upload datasets, big or small, messy or neat. 📊 These datasets then embark on a journey of transformation, cleaned and labeled by the community. In return for their contributions, community members earn tokens. 🪙 But that’s not all! Users can shop for pristine, ready-to-use datasets, perfect for training AI models or fine-tuning algorithms. 🤖💾
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Why we used RollApps 🛠️
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Noesis relies on RollApps for the scalability and speed necessary to tokenize datasets at scale. RollApps' modular blockchains enable Noesis to efficiently handle large volumes of data, ensuring that tokenization processes are swift and seamless. This scalability is essential for supporting the platform's growth and meeting the increasing demand for AI model training and dataset curation. The speed of RollApps is crucial for maintaining a responsive and user-friendly experience, enabling users to quickly tokenize, trade, and utilize datasets without delays. 🌐💻
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Challenges we ran into 🚧
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Our journey was not without its thorns. Wrestling with gas fees, ensuring data privacy while maintaining a decentralized ethos, and creating a seamless UX in the wild west of web3 were our fiercest battles. 🤺 Moreover, establishing a fair and motivating token economy that balances rewards with quality contributions had us scratching our heads more than once. 🧐
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## What's next for Noesis 🚀🌌
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The future is as boundless as the datasets we aim to clean! We're looking to introduce more sophisticated tools for data processing, expand our tokenomics to incentivize even deeper community engagement, and forge partnerships to grow our dataset repository. AI is only as smart as the data it learns from, and at Noesis, we're on a mission to make it genius. 🧠✨
